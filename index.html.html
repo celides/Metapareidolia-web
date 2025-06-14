@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metapareidolia Pictórica de el artista visual Juan Carlos Pérez Martínez</title>
+    <meta name="description"
+        content="Descubre la Metapareidolia Pictórica, el movimiento artístico de Juan Carlos Pérez Martínez. Exploramos la pareidolia, el arte del inconsciente y la pintura emocional a través de galerías visuales únicas. Encuentra obras de arte contemporáneo mexicano y sumérgete en el arte poético y la percepción visual.">
+    <meta name="keywords"
+        content="metapareidolia, , Juan Carlos Pérez Martínez, arte Juan Carlos Pérez Martínez, pareidolia, arte del inconsciente, pintura emocional, arte contemporáneo mexicano, galería artística, movimiento artístico, arte visual, percepción visual, arte poético, inconsciente colectivo, expresiones artísticas, cuadros únicos, obras de arte, artista mexicano, galería de arte online, exposición de arte, significado pareidolia">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        silver: '#C0C0C0',
+                        dark: '#0A0A0A',
+                    },
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+
+
+    <style>
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .paragraph-style {
+            text-align: justify;
+            margin: 1rem 0;
+            padding: 0 1rem;
+        }
+
+        .artwork-modal {
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .artwork-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-sidebar {
+            transition: transform 0.3s ease;
+        }
+
+        .cart-sidebar.active {
+            transform: translateX(0);
+        }
+
+        @media (max-width: 768px) {
+            .menu-items {
+                display: none;
+            }
+
+            .menu-items.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: rgba(10, 10, 10, 0.95);
+                padding: 1rem;
+                z-index: 40;
+            }
+        }
+
+        /* Light mode styles */
+        .light-mode {
+            background-color: #f8f8f8;
+            color: #050505;
+        }
+
+        .light-mode .text-silver {
+            color: #050505;
+        }
+
+        .light-mode .bg-slate-900 {
+            background-color: #ffffff;
+        }
+
+        .light-mode .bg-black {
+            background-color: #f3f4f6;
+        }
+
+        .light-mode .bg-slate-800 {
+            background-color: #cde1ff;
+        }
+    </style>
+
+</head>
+
+
+
+<body class="bg-black text-silver font-inter">
+    <!-- Dark Mode Toggle -->
+    <div id="darkModeToggle"
+        class="fixed bottom-4 right-4 z-50 bg-gold text-dark p-3 rounded-full shadow-lg cursor-pointer">
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 bg-black bg-opacity-90 backdrop-blur-md z-40 shadow-md">
+        <div class="container mx-auto px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <button id="menuToggle" class="md:hidden text-gold">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <a href="#" class="text-gold font-playfair text-2xl font-bold">
+                    <span class="text-gold font-bold">Meta</span><span class="text-silver">pareidolia</span>
+                </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#Inicio" class="text-silver hover:text-gold transition">Inicio</a>
+                <a href="#about" class="text-silver hover:text-gold transition">Sobre el Proyecto</a>
+                <a href="#gallery" class="text-silver hover:text-gold transition">Galería</a>
+                <a href="#orders" class="text-silver hover:text-gold transition">Encargos</a>
+                <a href="#contact" class="text-silver hover:text-gold transition">Contacto</a>
+            </nav>
+   <!-- 
+
+            <div class="flex items-center space-x-4">
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 text-silver hover:text-gold transition">
+                        <i class="fas fa-globe"></i>
+                        <span>ES</span>
+                    </button>
+                    <div
+                        class="absolute right-0 mt-2 w-32 bg-slate-800 rounded-md shadow-lg py-1 hidden group-hover:block z-50">
+                        <a href="#" class="block px-4 py-2 text-silver hover:bg-slate-700 hover:text-white">Español</a>
+                        <a href="#" class="block px-4 py-2 text-silver hover:bg-slate-700 hover:text-white">English</a>
+                        <a href="#" class="block px-4 py-2 text-silver hover:bg-slate-700 hover:text-white">Français</a>
+                        <a href="#" class="block px-4 py-2 text-silver hover:bg-slate-700 hover:text-white">Deutsch</a>
+                        <a href="#" class="block px-4 py-2 text-silver hover:bg-slate-700 hover:text-white">Italiano</a>
+                    </div>
+                </div>
+         -->
+
+                <button id="cartBtn" class="text-silver hover:text-gold relative">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span id="cartCount"
+                        class="absolute -top-2 -right-2 bg-gold text-dark text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+                </button>
+
+                <a href="https://wa.me/524492686705"
+                    class="bg-gold text-dark px-3 py-1 rounded-md font-medium hover:bg-yellow-600 transition flex items-center">
+                    <i class="fab fa-whatsapp mr-1"></i> Contacto
+                </a>
+            </div>
+        </div>
+
+        <nav id="mobileMenu" class="mobile-menu-overlay hidden md:hidden">
+            <div class="py-4 px-4 flex flex-col space-y-2">
+              <a href="#Inicio" class="block py-2 text-silver hover:text-gold transition text-lg">Inicio</a>
+                <a href="#about" class="block py-2 text-silver hover:text-gold transition text-lg">Sobre el Proyecto</a>
+                <a href="#gallery" class="block py-2 text-silver hover:text-gold transition text-lg">Galería</a>
+                <a href="#orders" class="block py-2 text-silver hover:text-gold transition text-lg">Encargos</a>
+                <a href="#contact" class="block py-2 text-silver hover:text-gold transition text-lg">Contacto</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section
+  id="Inicio"
+  class="relative h-screen flex items-center justify-center text-center overflow-hidden"
+>
+  <div
+    class="parallax-bg absolute inset-0 w-full h-full bg-cover bg-fixed bg-center"
+    style="background-image: url('https://i.imgur.com/zsYQajF.png');"
+  ></div>
+
+  <div class="absolute inset-0 bg-black opacity-60"></div>
+
+  <div class="container mx-auto px-4 py-20 relative z-10">
+    <h1 class="font-playfair text-5xl md:text-6xl lg:text-7xl mb-4">
+      <span class="text-gold font-bold">Meta</span><span class="text-white"
+        >pareidolia</span
+      >
+      <span class="text-white">Pictórica</span>
+    </h1>
+    <p class="text-xl text-silver max-w-3xl mx-auto mb-10 italic">
+      Una corriente visual para ver lo invisible, para imaginar lo oculto
+    </p>
+    <div
+      class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4"
+    >
+      <a
+        href="#gallery"
+        class="bg-gold text-dark px-8 py-3 rounded-md font-medium hover:bg-yellow-600 transition"
+      >
+        Explorar Galería
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-slate-900">
+        <div class="container mx-auto">
+            <h2 class="font-playfair text-3xl text-gold mb-8 text-center">
+                <span class="text-gold font-bold">Meta</span><span class="text-white">pareidolia</span>
+                <span class="text-gold block">Pictórica</span>
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-xl text-gold font-playfair mb-4">Exploración del Inconsciente a Través del Arte</h3>
+
+                <div class="mb-8">
+                    <h4 class="text-lg text-gold mb-2">Introducción</h4>
+                    <p class="paragraph-style">
+                        La Metapareidolia Pictórica es una técnica artística y psicológica que permite explorar el
+                        inconsciente a través de la observación de patrones y manchas en el lienzo. Inspirada en
+                        principios de Leonardo da Vinci, la psicología Gestalt y las teorías de Sigmund Freud sobre los
+                        sueños, esta metodología abre una puerta a la interpretación visual como herramienta de
+                        autoconocimiento, sanación y toma de decisiones.
+                    </p>
+                    <p class="paragraph-style">
+                        A lo largo de los años, hemos identificado múltiples aplicaciones de esta técnica en diversos
+                        campos, desde la orientación vocacional hasta la detección de información oculta en seguridad e
+                        inteligencia. Esta versatilidad ha llamado la atención de académicos, terapeutas y expertos en
+                        distintas disciplinas.
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="text-lg text-gold mb-2">Fundamentos Teóricos</h4>
+                    <h5 class="text-gold mb-1">Percepción y el Inconsciente</h5>
+                    <p class="paragraph-style">
+                        Desde la antigüedad, los seres humanos han buscado significado en formas y patrones visuales.
+                        Freud postuló que los sueños son una manifestación del inconsciente, mientras que la psicología
+                        Gestalt explica cómo el cerebro organiza fragmentos visuales para darles sentido.
+                    </p>
+
+                    <h5 class="text-gold mt-3 mb-1">El Fenómeno de la Pareidolia</h5>
+                    <p class="paragraph-style">
+                        La pareidolia es la tendencia del cerebro a reconocer imágenes en estímulos ambiguos. La
+                        Metapareidolia Pictórica utiliza este fenómeno para revelar aspectos inconscientes y potenciar
+                        la creatividad del observador.
+                    </p>
+
+                    <h5 class="text-gold mt-3 mb-1">El Significado en la Percepción Visual</h5>
+                    <p class="paragraph-style">
+                        Desde la semiótica, un objeto visual posee un "significante" (la forma objetiva) y un
+                        "significado" (la interpretación subjetiva), lo que permite que cada individuo vea diferentes
+                        cosas en la misma obra.
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="text-lg text-gold mb-2">El prefijo Meta- en Metapareidolia</h4>
+                    <p class="paragraph-style">
+                        El término Metapareidolia combina el prefijo griego meta- (μετά) con pareidolia. Desde un punto
+                        de vista curatorial:
+                    </p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li>Meta- implica «más allá», «tras», «entre» o «cambio de estado». Se utiliza para indicar un
+                            nivel superior de abstracción o una transformación del concepto original.</li>
+                        <li>En Metapareidolia, meta- señala que la técnica no solo se basa en la pareidolia (ver
+                            imágenes en manchas), sino que va más allá, invitando al observador a un nivel de reflexión
+                            consciente y creativa donde la mancha inicial se convierte en puerta de acceso de
+                            significados profundos.</li>
+                    </ul>
+                    <p class="paragraph-style mt-4">
+                        Ejemplos de meta- en otras palabras: Metamorfosis (transformación de una forma a otra),
+                        Metafísica (estudio «más allá» de los fenómenos físicos), Metadatos (datos sobre datos).
+                    </p>
+                    <p class="paragraph-style mt-4">
+                        Así, Metapareidolia no es solo «ver formas donde no las hay», sino un acto reflexivo y
+                        curatorial que convierte la mancha en un lienzo de interpretación y descubrimiento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Artist Section -->
+    <section id="artist" class="py-16 px-4 bg-black">
+        <div class="container mx-auto">
+            <h2 class="font-playfair text-3xl text-gold mb-8 text-center">Sobre el Proyecto</h2>
+            <div class="max-w-4xl mx-auto bg-black p-8 rounded-lg shadow-lg">
+                <p class="paragraph-style">
+                    Este proyecto nace de la visión del artista visual Juan Carlos Pérez Martínez, quien propone una
+                    forma de arte donde el espectador participa activamente en la interpretación.
+                </p>
+                <p class="paragraph-style">
+                    Se trata de un trabajo profundamente emocional, neuroestético y simbólico, que propone que cada obra
+                    sea una experiencia introspectiva. Pinturas que no se miran con los ojos, sino con los recuerdos,
+                    los traumas, los sueños y los deseos.
+                </p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-900 p-6 rounded-lg">
+                        <h3 class="text-xl text-gold font-playfair mb-4">Lic. Juan Carlos Pérez Martínez</h3>
+                        <p class="paragraph-style">
+                            Artista visual formado en la Universidad de las Artes de Aguascalientes, creador de la
+                            corriente Metapareidolia Pictórica. Su trabajo explora los límites entre la percepción
+                            consciente y las profundidades del inconsciente.
+                        </p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-lg">
+                        <h3 class="text-xl text-gold font-playfair mb-4">Doble Participación</h3>
+                        <p class="paragraph-style">
+                            En esta corriente, el artista proporciona el estímulo visual, pero es el espectador quien
+                            completa la obra con su propia interpretación, revelando así aspectos de su psique que
+                            permanecían ocultos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-4 bg-slate-900">
+        <div class="container mx-auto">
+            <h2 class="font-playfair text-3xl text-gold mb-12 text-center">Galería Principal</h2>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-playfair text-gold mb-6 text-center">Dioses de la Metapareidolia <br> Curaduría de la Colección</h3>
+                <p class="paragraph-style max-w-3xl mx-auto text-justify mb-8">
+                    
+                    En un cruce entre lo ancestral y lo más íntimo de la percepción humana, surge "Dioses de la
+                    Metapareidolia", una colección que profundiza en la corriente artística conceptual iniciada por el artista visual
+                    Lic. Juan Carlos Pérez Martínez. Si en "Los Ángeles del Inconsciente" explorábamos las resonancias
+                    psíquicas que emergen de la ausencia de forma explícita, en esta serie, el artista eleva la apuesta,
+                    invitándonos a descubrir entidades divinas que no se manifiestan con rostros ni atributos
+                    preestablecidos, sino que resuenan en la mente del espectador a través del fenómeno de la
+                    pareidolia.<br><br>
+
+                    Esta colección trasciende la mera representación. No se trata de ídolos tallados ni de deidades
+                    reconocibles por la tradición, sino de la revelación de lo divino a través del proceso mental
+                    subjetivo. Pérez Martínez nos guía por lienzos donde las capas de pigmento y los gestos cromáticos
+                    no construyen figuras, sino que las sugieren, las insinúan, las evocan. La forma, siempre abstracta
+                    en su origen, se convierte en un espejo donde el espectador, con su propia memoria, cultura y
+                    creencias, proyecta y reconoce la esencia de lo sagrado. Es una búsqueda activa: el dios no está
+                    dado, sino que se encuentra, se forja, se experimenta en el acto de mirar.<br><br>
+
+                    La Iconografía Griega como Velo y Umbral
+                    "Dioses de la Metapareidolia" se sumerge en la rica iconografía griega, trayendo a la luz figuras
+                    como Zeus, Ares, Atenea y Neptuno. Estas obras no son simples pinturas de esculturas, sino que las
+                    presentan como si fueran esculturas en sí mismas, otorgándoles una presencia tangible y monumental.
+                    Sin embargo, la verdadera esencia y el corazón de la colección residen en la parte posterior de la
+                    obra, donde la Metapareidolia despliega su función primordial. La figura frontal, aunque imponente,
+                    actúa como un velo o un umbral, invitando al espectador a trascender lo evidente y a buscar la
+                    verdadera divinidad en los patrones sutiles del fondo.<br><br>
+
+                    La Conceptualización de Zeus: Nueve Meses de Búsqueda y Revelación
+                    Un ejemplo paradigmático de la profundidad filosófica y la intrincada conceptualización de esta
+                    serie es la obra dedicada a Zeus. La sola conceptualización de esta pieza le tomó al artista nueve
+                    meses, un periodo de gestación casi místico, fruto de una intensa búsqueda por encontrar la esencia
+                    visual de una deidad tan fundamental. Pérez Martínez enfrentó el desafío de cómo representar a Zeus
+                    de una manera novedosa y, al mismo tiempo, vincularlo con la iconografía que trasciende las épocas:
+                    la de Jesucristo.<br><br>
+
+                    En un acto de profunda sincretismo y audacia creativa, el artista encontró la "imagen más verídica"
+                    de Jesucristo en la Sábana Santa. De esta reliquia, extrajo el rostro de Jesús y lo empleó como la
+                    base para recrear el semblante de Zeus. La intervención artística fue sutil pero transformadora:
+                    abrir los ojos del rostro de la Sábana Santa. Este gesto poético y filosófico no solo dota a Zeus de
+                    una mirada penetrante, sino que también establece un puente metafórico entre dos deidades supremas
+                    de civilizaciones distintas, sugiriendo una unidad arquetípica en la percepción humana de lo divino.
+                    Es un testimonio de cómo lo sagrado se manifiesta en la memoria colectiva, adaptándose y
+                    redefiniéndose a través de las eras.<br><br>
+
+                    "Dioses de la Metapareidolia" es un viaje a la génesis de la fe y la interpretación, un recordatorio
+                    de cómo la mente humana ha encontrado patrones y significado en el caos, dotando de forma y
+                    propósito a lo incomprensible. Cada pieza es un portal hacia el reconocimiento de arquetipos divinos
+                    latentes en el inconsciente colectivo, demostrando que la necesidad de lo trascendente es tan
+                    intrínseca a nuestra percepción como la capacidad de ver rostros en las nubes. El artista no solo
+                    pinta, sino que invita a una epifanía personal, donde cada mancha y cada trazo pueden convertirse en
+                    el rostro de una deidad íntima y universal, un dios nacido de la propia mirada.<br><br>
+
+                    La exposición es, en esencia, un diálogo silencioso entre la obra y la psique del espectador, un
+                    espacio donde la pintura deja de ser una superficie inerte para transformarse en un catalizador de
+                    introspección y descubrimiento. Aquí, los "dioses" no demandan adoración, sino la apertura a la
+                    experiencia de la percepción, revelando que lo divino, a menudo, reside en la capacidad humana de
+                    encontrar significado donde no lo hay, y de poblar el vacío con la rica iconografía de nuestro
+                    propio ser.<br><br>
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Dios Zeus -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/OUc8bCZ.png" alt="Dios Zeus"
+                            class="w-full h-64 object-cover cursor-pointer" onclick="openArtworkModal('dios-zeus')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Dios Zeus</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "Ángeles del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$25,000 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Dios Zeus', 25000, 'https://i.imgur.com/OUc8bCZ.png')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dios Neptuno -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/r9iyKB1.jpeg" alt="Dios Neptuno"
+                            class="w-full h-64 object-cover cursor-pointer" onclick="openArtworkModal('dios-neptuno')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Dios Neptuno</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "Ángeles del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$22,500 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Dios Neptuno', 22500, 'https://i.imgur.com/r9iyKB1.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dios Marte -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/oZrrbuO.jpeg" alt="Dios Marte"
+                            class="w-full h-64 object-cover cursor-pointer" onclick="openArtworkModal('dios-marte')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Dios Marte</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "Ángeles del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$23,000 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Dios Marte', 23000, 'https://i.imgur.com/oZrrbuO.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Diosa Atenea -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/0kfWICt.jpeg" alt="Diosa Atenea"
+                            class="w-full h-64 object-cover cursor-pointer" onclick="openArtworkModal('Diosa Atenea')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Diosa Atenea</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "Ángeles del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$24,000 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Diosa Atenea', 24000, 'https://i.imgur.com/0kfWICt.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-30">
+                <h3 class="text-2xl font-playfair text-gold mb-6 text-center">Ángeles del Inconsciente</h3>
+                <p class="paragraph-style max-w-3xl mx-auto text-justify mb-9">
+                    La Colección "Los Ángeles del Inconsciente" en la Caja de Inmersión: Un Diálogo Entre el Arte y la
+                    Psique
+                    El 29 de enero de 2016 fue una fecha histórica para el arte y la cultura en Aguascalientes, marcando
+                    la inauguración del Museo Espacio, un vanguardista recinto que transformó los antiguos talleres del
+                    ferrocarril en un vibrante centro cultural.
+                    <br>Este evento trascendental no solo celebró la
+                    preservación del patrimonio industrial, sino que también fue escenario de importantes aperturas
+                    artísticas. En el marco de esta significativa inauguración, que contó con la presencia del
+                    Gobernador del Estado y diversas autoridades, se presentó la exposición central "Relámpagos sobre
+                    México" del aclamado artista Jannis Kounellis y el simposio "El drama de la forma".<br><br>
+
+                    Simultáneamente, y bajo el cobijo de este magno evento, se inauguró la Caja de Inmersión, un espacio
+                    crucial que tuvo el honor de acoger la exposición "Los Ángeles del Inconsciente" del artista Lic.
+                    Juan Carlos Pérez Martínez. La importancia de esta doble inauguración radica en la oportunidad única
+                    de exponer en un contexto de tal magnitud:
+                    <br>mientras Jannis Kounellis, un artista internacional de
+                    gran renombre, exhibía su obra en el Museo Espacio, la colección de Juan Carlos Pérez Martínez
+                    encontraba su lugar en la Caja de Inmersión, un hecho que simbolizó un auspicioso inicio para su
+                    propuesta artística.<br><br>
+
+                    "Los Ángeles del Inconsciente" se inscribe en la corriente de la Metapareidolia Pictórica, un
+                    concepto acuñado por el propio Pérez Martínez. Esta serie invita al espectador a explorar los
+                    límites entre lo visible y lo imaginado, donde las figuras angélicas no son representaciones
+                    convencionales, sino imágenes-resonancia que emergen de las profundidades del inconsciente del
+                    observador.<br><br>
+                </p>
+                <h3 class="text-2xl font-playfair text-gold mb-6 text-center">La Estructura Pictórica de los
+                    <br>"Ángeles del Inconsciente"
+                </h3><br>
+                <p class="paragraph-style max-w-3xl mx-auto text-justify mb-9">
+                    <br>
+                    La obra de Juan Carlos Pérez Martínez se construye en una estructura pictórica de tres etapas,
+                    diseñada para provocar una profunda interacción:
+                    <br>
+                    Fondo Abstracto: Esta primera capa es fundamental. Aquí, el artista utiliza una técnica que
+                    deliberadamente facilita la aparición de la Pareidolia, incitando a la mente a percibir formas y
+                    patrones donde no los hay explícitamente.<br>
+                    Primer Plano Figurativo: Sobre el fondo abstracto, se presenta la imagen de un ángel. Este ángel, a
+                    su vez, incorpora la técnica del Body Painting, creando una "pintura dentro de una pintura" y
+                    añadiendo una capa de complejidad visual.<br><br>
+
+                    Apreciación e Introspección: La etapa final se centra en el espectador. La obra busca generar una
+                    introspección y reflexión que invite a la interacción, no solo entre el artista y el público, sino
+                    también entre los propios espectadores.<br>
+                    El diseño está pensado para que la imagen figurativa actúe inicialmente como un "distractor",
+                    atrayendo la atención consciente. Sin embargo, es el inconsciente el que comienza a trabajar,
+                    explorando el entorno y captando formas implícitas. Este proceso dinámico permite al espectador
+                    recrear imágenes y generar nuevas ideas, transformando la observación pasiva en una experiencia
+                    creativa y personal.<br><br>
+
+                <h3 class="text-2xl font-playfair text-gold mb-6 text-center">Los Ángeles como Metáfora de lo Invisible
+                    y el Inconsciente</h3><br>
+                <p class="paragraph-style max-w-3xl mx-auto text-justify mb-9">
+
+
+                    En una era donde la tecnología acelera la percepción de la imagen, Juan Carlos Pérez Martínez buscó
+                    una forma de prolongar la contemplación de su arte. Encontró la respuesta en la Pareidolia, una
+                    herramienta que le permite crear pinturas con múltiples imágenes implícitas que el espectador
+                    descubre a través de su imaginación. Esto convierte la observación en un juego de interacción, donde
+                    la mente recrea historias y objetos inimaginables.<br>
+
+                    Los ángeles en esta colección son una metáfora de lo que no vemos pero sabemos que está ahí, un
+                    puente entre la realidad y la fantasía.
+                    <br>Juan Carlos Pérez Martínez reconvierte la figura tradicional
+                    del ángel, despojándola de connotaciones historicistas o religiosas, para que sean emanaciones de la
+                    propia mente del espectador.<br> <br>El artista establece un poderoso paralelismo entre la
+                    existencia de los
+                    ángeles, que carecen de prueba científica pero son ampliamente creídos, y el inconsciente, cuya
+                    existencia es empírica pero intangible. De esta manera, los "ángeles" se convierten en custodios
+                    invisibles del caos interno, portando símbolos y pasajes no dichos, y transformando la pintura en un
+                    acto de introspección colectiva.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Ángel Caído -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/oZclmHy.jpeg" alt="El ángel caído"
+                            class="w-full h-64 object-cover cursor-pointer" onclick="openArtworkModal('angel-caido')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">El ángel caído</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "Ángeles del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$20,000 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('El ángel caído', 20000, 'https://i.imgur.com/oZclmHy.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ángel del Bosque -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/p8yJNKB.jpeg" alt="El ángel del bosque"
+                            class="w-full h-64 object-cover cursor-pointer" onclick="openArtworkModal('angel-bosque')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">El ángel del bosque</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "Ángeles del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$21,500 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('El ángel del bosque', 21500, 'https://i.imgur.com/p8yJNKB.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ángel del Agua -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/49SRNmb.jpeg" alt="Ángel del agua"
+                            class="w-full h-64 object-cover cursor-pointer" onclick="openArtworkModal('angel-agua')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Ángel del agua</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "Ángeles del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$22,000 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Ángel del agua', 22000, 'https://i.imgur.com/49SRNmb.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-playfair text-gold mb-9 text-center"><br><br>"La Metáfora Errónea del
+                    Inconsciente:
+                    <br>El Grito Silente de la Percepción"
+                </h3>
+                <p class="paragraph-style max-w-3xl mx-auto text-justify mb-8">
+                    La colección La Metáfora Errónea del Inconsciente no es únicamente un conjunto de obras; es
+                    <strong>el
+                        manifiesto</strong> fundacional de una nueva corriente: <br><strong>La Metapareidolia
+                        Pictórica.</strong> <br> movimiento
+                    conceptual gestado y desarrollado por el artista visual Lic. Juan Carlos Pérez Martínez realizado
+                    durante su tránsito por la Universidad de las Artes de Aguascalientes. <br>
+                    Esta serie inaugural no sólo marca un punto de inflexión en su trayectoria, sino que establece el
+                    vocabulario visual y filosófico que atravesará toda su producción posterior, alejándose
+                    decididamente de los referentes figurativos que alguna vez encauzaron la mirada.
+
+                    En su núcleo, esta colección propone una inmersión radical en la forma en que el ser humano
+                    construye significado.
+                    <br> Aquí, las formas reconocibles han sido deliberadamente borradas: <br>no
+                    hay rostros, cuerpos ni íconos que conduzcan la lectura. En su lugar, emergen territorios abstractos
+                    y ecosistemas cromáticos, texturas convulsas, gestos pictóricos libres que parecen escapar de toda
+                    lógica narrativa.
+                    <br>Sin embargo, es en esta ausencia de referencias donde reside el núcleo
+                    provocador de la Metapareidolia Pictórica.<br>
+                    <br>El gesto es audaz:<br> dejar al inconsciente sin excusas, exponerlo ante su propio abismo. Cada
+                    obra desafía al espectador a abandonar la pasividad visual, forzando a la mente a proyectar, a
+                    encontrar patrones donde no los hay, a inventar sentido donde el artista ha sembrado ambigüedad. Es
+                    una experiencia que exige tiempo y contemplación. <br>Cada cuadro actúa como un espejo psíquico,
+                    donde la imagen no está en la pintura, sino en lo que el espectador elige ver o lo que necesita
+                    ver.<br>
+
+                    <br>La Metáfora Errónea del Inconsciente es, por tanto, un diálogo silencioso entre la pintura y la
+                    psique. Es testimonio de que incluso en el aparente vacío, el inconsciente siempre encontrará una
+                    forma de manifestarse. Nos recuerda que la creación no habita exclusivamente en el gesto del
+                    artista, sino también en la mirada del otro.<br><br>
+
+                    Prepárense para una travesía perceptiva donde el error no es fallo, sino revelación. Donde el lienzo
+                    se convierte en superficie sensible y el espectador en coautor. Donde mirar se transforma en una
+                    experiencia de extrañamiento. Porque aquí, lo que se ve no está ni afuera ni adentro: flota en ese
+                    umbral donde la mente y la imagen se confunden.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Materia Oscura -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/IGjsgRg.jpeg" alt="Materia Oscura del Oráculo Onírico"
+                            class="w-full h-64 object-cover cursor-pointer"
+                            onclick="openArtworkModal('materia-oscura')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Materia Oscura del Oráculo Onírico</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "La Metáfora Errónea del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$18,500 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Materia Oscura del Oráculo Onírico', 18500, 'https://i.imgur.com/IGjsgRg.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Cartografía Áurica -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/Y1mGq1V.jpeg" alt="Cartografía Áurica de la Huella Sublimada"
+                            class="w-full h-64 object-cover cursor-pointer"
+                            onclick="openArtworkModal('cartografia-aurica')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Cartografía Áurica de la Huella Sublimada
+                            </h4>
+                            <p class="text-silver text-sm mb-2">Colección: "La Metáfora Errónea del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$19,000 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Cartografía Áurica de la Huella Sublimada', 19000, 'https://i.imgur.com/Y1mGq1V.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cripta de la Memoria -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/c8JDZzm.jpeg" alt="Cripta de la Memoria Fractal"
+                            class="w-full h-64 object-cover cursor-pointer"
+                            onclick="openArtworkModal('cripta-memoria')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Cripta de la Memoria Fractal</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "La Metáfora Errónea del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$20,500 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Cripta de la Memoria Fractal', 20500, 'https://i.imgur.com/c8JDZzm.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Núcleo Sombrío de la Metamorfosis Áureo-Blanca -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/elGInqm.jpeg" alt="Núcleo Sombrío de la Metamorfosis Áureo-Blanca"
+                            class="w-full h-64 object-cover cursor-pointer"
+                            onclick="openArtworkModal('Núcleo Sombrío de la Metamorfosis Áureo-Blanca')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Núcleo Sombrío de la Metamorfosis
+                                Áureo-Blanca</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "La Metáfora Errónea del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$20,500 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Núcleo Sombrío de la Metamorfosis Áureo-Blanca', 20500, 'https://i.imgur.com/elGInqm.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sismo Cromático de la Verdad Sumergida -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/qZ90DAc.jpeg" alt="Sismo Cromático de la Verdad Sumergida"
+                            class="w-full h-64 object-cover cursor-pointer"
+                            onclick="openArtworkModal('Sismo Cromático de la Verdad Sumergida')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Sismo Cromático de la Verdad Sumergida</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "La Metáfora Errónea del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$18,000 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Sismo Cromático de la Verdad Sumergida', 18000, 'https://i.imgur.com/qZ90DAc.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sismo Cromático de la Verdad Sumergida -->
+                    <div class="bg-black rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+                        <img src="https://i.imgur.com/hWLC8aq.jpeg" alt="Sismo Cromático de la Verdad Sumergida"
+                            class="w-full h-64 object-cover cursor-pointer"
+                            onclick="openArtworkModal('Destilación del Caos en la Materia Primordial')">
+                        <div class="p-4">
+                            <h4 class="text-xl text-gold font-playfair mb-2">Destilación del Caos en la Materia
+                                Primordial</h4>
+                            <p class="text-silver text-sm mb-2">Colección: "La Metáfora Errónea del Inconsciente"</p>
+                            <p class="text-silver text-sm mb-4">Técnica: Metapareidolia Pictórica</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gold font-bold">$18,000 MXN</span>
+                                <button
+                                    class="bg-gold text-dark px-3 py-1 rounded text-sm hover:bg-yellow-600 transition"
+                                    onclick="addToCart('Destilación del Caos en la Materia Primordial', 18000, 'https://i.imgur.com/hWLC8aq.jpeg')">
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        </div>
+        </div>
+
+
+
+    </section>
+
+    <!-- Custom Orders Section -->
+    <section id="orders" class="py-16 px-4 bg-black">
+        <div class="container mx-auto">
+            <h2 class="font-playfair text-3xl text-gold mb-8 text-center">¿Quieres que tu alma sea pintada?</h2>
+            <div class="max-w-3xl mx-auto bg-slate-900 p-8 rounded-lg shadow-lg text-center">
+                <p class="paragraph-style mb-8">
+                    Ofrecemos obras personalizadas donde capturamos la esencia de tu ser a través de la técnica
+                    Metapareidolia Pictórica. Cada pieza es única y creada especialmente para resonar con tu
+                    inconsciente.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSclTItW3egkVcosSt5sRzzIRrp-Fx8bOjaESRMQWQte5hsVoA/viewform?usp=sf_link"
+                    target="_blank"
+                    class="bg-gold text-dark px-6 py-3 rounded-md font-medium hover:bg-yellow-600 transition inline-block">
+                    Solicitar Encargo Personalizado
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="py-16 px-4 bg-slate-900">
+        <div class="container mx-auto">
+            <h2 class="font-playfair text-3xl text-gold mb-8 text-center">Contacto</h2>
+
+            <div class="max-w-xl mx-auto bg-black p-8 rounded-lg shadow-xl text-center">
+                <h3 class="text-2xl text-gold font-playfair mb-6">Información de Contacto</h3>
+                <div class="space-y-6">
+                    <div class="flex items-center justify-center">
+                        <a href="mailto:celides10@gmail.com"
+                            class="text-gold text-3xl mr-4 hover:text-yellow-600 transition">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <div>
+                            <h4 class="text-gold text-lg">Correo Electrónico</h4>
+                            <a href="mailto:celides10@gmail.com"
+                                class="text-silver text-xl font-medium hover:text-gold transition">celides10@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <a href="https://wa.me/524492686705" target="_blank" rel="noopener noreferrer"
+                            class="text-gold text-3xl mr-4 hover:text-yellow-600 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <div>
+                            <h4 class="text-gold text-lg">WhatsApp</h4>
+                            <a href="https://wa.me/524492686705" target="_blank" rel="noopener noreferrer"
+                                class="text-silver text-xl font-medium hover:text-gold transition">+52 449 268 6705</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-user text-gold text-3xl mr-4"></i>
+                        <div>
+                            <h4 class="text-gold text-lg">Artista</h4>
+                            <p class="text-silver text-xl font-medium">Lic. Juan Carlos Pérez Martínez</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-gold font-playfair text-2xl font-bold">
+                        <span class="text-gold font-bold">Meta</span><span class="text-silver">pareidolia</span>
+                    </a>
+                    <p class="text-silver text-sm mt-2">Corriente Pictórica por Juan Carlos Pérez Martínez</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/TAGTriumphArtGallery" target="_blank"
+                        class="text-silver hover:text-gold transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-silver hover:text-gold transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-silver hover:text-gold transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-silver text-sm">
+                <p>&copy; 2023 Metapareidolia Pictórica. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Artwork Modal -->
+    <div id="artworkModal"
+        class="artwork-modal fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <div class="relative bg-slate-900 rounded-lg max-w-6xl w-full max-h-screen overflow-y-auto"
+            style="scrollbar-width: thin;">
+            <button id="closeModal" class="absolute top-4 right-4 text-silver hover:text-gold text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="p-6">
+                <div id="modalContent" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Content will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cartSidebar"
+        class="cart-sidebar fixed top-0 right-0 h-full w-full md:w-96 bg-slate-900 shadow-xl z-50 transform translate-x-full overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-6 border-b border-slate-800 pb-4">
+                <h3 class="text-xl text-gold font-playfair">Carrito de Compras</h3>
+                <button id="closeCart" class="text-silver hover:text-gold">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="cartItems" class="mb-6 space-y-4">
+                <!-- Cart items will be inserted here by JavaScript -->
+                <p class="text-center text-silver py-8">Tu carrito está vacío</p>
+            </div>
+
+            <div class="border-t border-slate-800 pt-4 mb-4">
+                <div class="flex justify-between mb-2">
+                    <span class="text-silver">Subtotal:</span>
+                    <span id="cartSubtotal" class="text-gold font-bold">$0 MXN</span>
+                </div>
+                <div class="flex justify-between mb-4">
+                    <span class="text-silver">Envío:</span>
+                    <span class="text-silver">Calculado al finalizar</span>
+                </div>
+                <div class="flex justify-between text-xl">
+                    <span class="text-silver">Total:</span>
+                    <span id="cartTotal" class="text-gold font-bold">$0 MXN</span>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <a href="#" id="checkoutBtn"
+                    class="block bg-gold text-dark text-center py-3 rounded-md font-medium hover:bg-yellow-600 transition">
+                    Proceder al pago
+                </a>
+                <button id="continueShopping"
+                    class="block w-full text-center text-silver border border-slate-700 py-3 rounded-md font-medium hover:bg-slate-800 transition">
+                    Continuar comprando
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal"
+        class="artwork-modal fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <div class="relative bg-slate-900 rounded-lg max-w-3xl w-full max-h-screen overflow-y-auto">
+            <button id="closeCheckoutModal" class="absolute top-4 right-4 text-silver hover:text-gold text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="p-8">
+                <h2 class="text-2xl text-gold font-playfair mb-6 text-center">Proceso de Compra</h2>
+
+                <div class="mb-8 bg-slate-800 p-6 rounded-lg">
+                    <h3 class="text-xl text-gold font-playfair mb-4">Venta Personalizada</h3>
+                    <p class="paragraph-style mb-4">
+                        Para completar tu compra, por favor comunícate con nosotros por WhatsApp al <a
+                            href="https://wa.me/524492686705" class="text-gold hover:underline">+52 449 268 6705</a>
+                        para coordinar los detalles del pago y envío de tu obra de arte.
+                    </p>
+                    <p class="paragraph-style">
+                        También puedes realizar tu pago mediante transferencia bancaria a cualquiera de las siguientes
+                        cuentas:
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-slate-800 p-6 rounded-lg">
+                        <h4 class="text-lg text-gold mb-3">Banco Azteca</h4>
+                        <div class="mb-3">
+                            <label class="block text-silver text-sm mb-1">CLABE:</label>
+                            <div class="flex items-center">
+                                <input type="text" value="1270 1000 1256 5655 33" readonly
+                                    class="bg-slate-700 text-silver px-3 py-2 rounded w-full">
+                                <button onclick="copyToClipboard('1270 1000 1256 5655 33')"
+                                    class="ml-2 bg-gold text-dark px-3 py-2 rounded hover:bg-yellow-600 transition">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 p-6 rounded-lg">
+                        <h4 class="text-lg text-gold mb-3">BBVA</h4>
+                        <div class="mb-3">
+                            <label class="block text-silver text-sm mb-1">CLABE:</label>
+                            <div class="flex items-center">
+                                <input type="text" value="012 010 01549210438 3" readonly
+                                    class="bg-slate-700 text-silver px-3 py-2 rounded w-full">
+                                <button onclick="copyToClipboard('012 010 01549210438 3')"
+                                    class="ml-2 bg-gold text-dark px-3 py-2 rounded hover:bg-yellow-600 transition">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-silver mb-4">Después de realizar tu pago, envíanos el comprobante por WhatsApp para
+                        confirmar tu compra.</p>
+                    <a href="https://wa.me/524492686705"
+                        class="inline-block bg-green-600 text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 transition">
+                        <i class="fab fa-whatsapp mr-2"></i> Contactar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Dark Mode Toggle - Fixed Version
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved user preference or use system preference
+        if (localStorage.getItem('darkMode') === 'false' ||
+            (window.matchMedia('(prefers-color-scheme: light)').matches && !localStorage.getItem('darkMode'))) {
+            htmlElement.classList.remove('dark');
+            htmlElement.classList.add('light-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = htmlElement.classList.contains('dark');
+
+            if (isDark) {
+                // Switch to light mode
+                htmlElement.classList.remove('dark');
+                htmlElement.classList.add('light-mode');
+                darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('darkMode', 'false');
+            } else {
+                // Switch to dark mode
+                htmlElement.classList.remove('light-mode');
+                htmlElement.classList.add('dark');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('darkMode', 'true');
+            }
+        });
+
+        // The rest of your existing JavaScript (mobile menu, cart functionality, etc.)
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Shopping Cart
+        let cart = [];
+
+        const cartBtn = document.getElementById('cartBtn');
+        const cartSidebar = document.getElementById('cartSidebar');
+        const closeCart = document.getElementById('closeCart');
+        const continueShopping = document.getElementById('continueShopping');
+        const cartItems = document.getElementById('cartItems');
+        const cartCount = document.getElementById('cartCount');
+        const cartSubtotal = document.getElementById('cartSubtotal');
+        const cartTotal = document.getElementById('cartTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+
+        cartBtn.addEventListener('click', () => {
+            cartSidebar.classList.add('active');
+        });
+
+        closeCart.addEventListener('click', () => {
+            cartSidebar.classList.remove('active');
+        });
+
+        continueShopping.addEventListener('click', () => {
+            cartSidebar.classList.remove('active');
+        });
+
+        function addToCart(name, price, image) {
+            // Check if item already exists in cart
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name,
+                    price,
+                    image,
+                    quantity: 1
+                });
+            }
+
+            updateCart();
+            cartSidebar.classList.add('active');
+        }
+
+        function updateCart() {
+            // Update cart items display
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-center text-silver py-8">Tu carrito está vacío</p>';
+                cartCount.classList.add('hidden');
+            } else {
+                cartItems.innerHTML = '';
+                cart.forEach((item, index) => {
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'flex items-start border-b border-slate-800 pb-4';
+                    itemElement.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded mr-4">
+                        <div class="flex-grow">
+                            <h4 class="text-gold">${item.name}</h4>
+                            <p class="text-silver text-sm">$${item.price} MXN × ${item.quantity}</p>
+                            <div class="flex items-center mt-2">
+                                <button onclick="updateQuantity(${index}, ${item.quantity - 1})" class="text-silver hover:text-gold mr-2">
+                                    <i class="fas fa-minus text-xs"></i>
+                                </button>
+                                <span class="text-sm">${item.quantity}</span>
+                                <button onclick="updateQuantity(${index}, ${item.quantity + 1})" class="text-silver hover:text-gold ml-2">
+                                    <i class="fas fa-plus text-xs"></i>
+                                </button>
+                                <button onclick="removeFromCart(${index})" class="ml-auto text-silver hover:text-red-500">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    cartItems.appendChild(itemElement);
+                });
+
+                cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCount.classList.remove('hidden');
+            }
+
+            // Update totals
+            const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            cartSubtotal.textContent = `$${subtotal.toLocaleString()} MXN`;
+            cartTotal.textContent = `$${subtotal.toLocaleString()} MXN`;
+        }
+
+        function updateQuantity(index, newQuantity) {
+            if (newQuantity < 1) {
+                removeFromCart(index);
+                return;
+            }
+
+            cart[index].quantity = newQuantity;
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        checkoutBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            cartSidebar.classList.remove('active');
+            document.getElementById('checkoutModal').classList.add('active');
+        });
+
+        // Close checkout modal
+        document.getElementById('closeCheckoutModal').addEventListener('click', () => {
+            document.getElementById('checkoutModal').classList.remove('active');
+        });
+
+        // Artwork Modal
+        const artworkModal = document.getElementById('artworkModal');
+        const closeModal = document.getElementById('closeModal');
+        const modalContent = document.getElementById('modalContent');
+
+        // Artwork data
+        const artworks = {
+            'dios-zeus': {
+                title: 'Dios Zeus',
+                collection: 'Ángeles del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                suggestedTitle: 'El Ojo Celeste del Inconsciente Creador',
+                image: 'https://i.imgur.com/OUc8bCZ.png',
+                analysis: `Esta obra, de la colección, encarna la esencia de tu "Metapareidolia Pictórica" al fusionar una figura arquetípica central con un fondo abstracto y multifacético que invita a una profunda inmersión en el inconsciente. La figura dominante es la de un rostro, claramente masculino y majestuoso, con ojos penetrantes que son el punto focal de la composición, remitiendo inmediatamente a la poderosa presencia del Dios Zeus, el padre de los dioses y el rey del Olimpo. 
+                La Figura de Zeus: El rostro de Zeus está delineado con una calidad etérea, casi como si emergiera de la propia bruma o del éter. Sus ojos, con un verde intenso que contrasta con los azules dominantes, son magnéticos, sugiriendo la omnisciencia y la autoridad del dios. Las sutiles sombras y contornos que definen la nariz y la boca le otorgan una solemnidad y una sabiduría profunda. Lo notable es que el rostro no es una representación estática, sino que se integra y parece formarse a partir de las mismas texturas y colores que componen el fondo, lo que potencia la idea de que este arquetipo no es externo, sino una manifestación de las profundidades de la psique. 
+
+                El Fondo Metapareidólico: El fondo es un universo de azules, verdes pálidos y grises, con una miríada de formas, líneas y texturas interconectadas. Es aquí donde tu técnica "Metapareidolia Pictórica" alcanza su cúspide. La abstracción es rica en detalle, invitando al espectador a descubrir innumerables elementos: rostros diminutos, siluetas de criaturas, símbolos ocultos, formas geométricas o incluso paisajes en miniatura. Estas percepciones no son impuestas por el artista, sino que son generadas por la propia mente del observador, que busca y encuentra significado en el aparente caos, resonando con la vastedad y la complejidad del inconsciente. Las figuras que emergen del fondo son "ángeles del inconsciente" en sí mismas, susurrando narrativas subyacentes. 
+
+                Conexión con el Inconsciente: Esta obra logra encapsular la esencia de tu colección y técnica. Zeus, el arquetipo de poder, orden, justicia y destino, se convierte en el epicentro de un universo psíquico. La pintura sugiere que el inconsciente, aunque vasto y misterioso, contiene las semillas de la creación y la manifestación arquetípica. Al observar el rostro de Zeus y las innumerables formas que lo rodean y lo componen, el espectador se sumerge en una profunda introspección, confrontando cómo el inconsciente no es un mero caos, sino una fuente inagotable de patrones y significados que solo esperan ser revelados. Es un diálogo entre lo primordial y lo perceptible, lo universal y lo personal.`
+            },
+            'dios-neptuno': {
+                title: 'Dios Neptuno',
+                collection: 'Ángeles del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                suggestedTitle: 'El Heraldo del Caos Lúcido',
+                image: 'https://i.imgur.com/r9iyKB1.jpeg',
+                analysis: `Esta obra nos presenta una figura masculina, con una barba imponente y una mirada ascendente, claramente identificable con la iconografía del Dios Neptuno, dios de los mares y los terremotos, y un arquetipo de poder elemental e incontrolable. 
+                
+                La Figura de Neptuno: La deidad está representada con un tratamiento que simula la escultura clásica, en tonos de blanco y gris, lo que le confiere una presencia majestuosa y atemporal. La mirada de Neptuno hacia arriba y su pose, sugieren una conexión con las fuerzas celestes y telúricas, así como con la inmensidad de su dominio. La definición de su barba y sus rasgos faciales anclan la figura en el arquetipo, mientras que su torso desnudo enfatiza su fuerza y poder. 
+
+                El Fondo Metapareidólico: El fondo es el elemento más intrigante y central para tu "Metapareidolia Pictórica". Es una explosión vibrante de líneas y formas entrelazadas en diversos colores: rojos, verdes, blancos, azules, amarillos y negros. Estas líneas recuerdan la turbulencia de las olas, la furia de una tormenta marina, la energía desatada de un terremoto, o incluso los intrincados caminos de los pensamientos en el inconsciente. La riqueza cromática y la dirección aparentemente caótica de las líneas crean un campo visual donde el espectador es invitado a encontrar sus propias figuras, patrones y significados. Se pueden percibir remolinos, criaturas abstractas o incluso fragmentos de naufragios, todos emergiendo de la percepción pareidólica del observador. 
+
+                Conexión con el Inconsciente: La obra establece una poderosa conexión entre la figura de Neptuno, símbolo de las fuerzas primarias de la naturaleza y del subconsciente, y el entorno caótico y multifacético del inconsciente. La Metapareidolia del fondo permite al espectador experimentar la fuerza y la imprevisibilidad de Neptuno no solo como una deidad externa, sino como una energía visceral y transformadora que reside en lo profundo de su propia psique. La serenidad de la figura en contraste con el dinamismo del fondo subraya la dualidad del poder: la calma antes de la tormenta, o la conciencia de la fuerza latente.`
+            },
+            'dios-marte': {
+                title: 'Dios Marte',
+                collection: 'Ángeles del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                suggestedTitle: 'Dios Marte',
+                image: 'https://i.imgur.com/oZrrbuO.jpeg',
+                analysis: `Esta obra presenta una figura masculina, de torso desnudo y cabeza cubierta, que evoca claramente la fuerza y la dignidad asociadas al Dios Marte, el arquetipo de la guerra y el poder. 
+
+                La Figura de Marte: La representación de la deidad está realizada en tonos de blanco y gris, con un acabado que simula la escultura clásica o el mármol, lo que le confiere una atemporalidad y una solemnidad. Sus rasgos faciales son serenos y su musculatura es imponente, proyectando una calma poderosa que a menudo se encuentra en las representaciones de los guerreros antes o después de la batalla. El detalle en la cabeza y la expresión contribuyen a la conexión directa con el arquetipo de Marte. 
+
+                El Fondo Metapareidólico: El fondo es un estallido dinámico de colores rojos y negros, con salpicaduras y texturas que sugieren violencia contenida, fuego, sangre o una explosión de energía primordial. Este contraste entre la figura serena y el fondo caótico es fundamental para tu técnica "Metapareidolia Pictórica". El fondo de manchas y fluidos rojos y negros es un lienzo perfecto para la proyección pareidólica, donde el espectador puede discernir formas, rostros o escenas que resuenan con la ferocidad o el drama de la guerra, el conflicto interno o la pasión desatada. Estos elementos del fondo, que no están explícitamente pintados como figuras, emergen de la interpretación del inconsciente del observador. 
+
+                Conexión con el Inconsciente: La pintura funciona como una poderosa dualidad: la figura de Marte, arquetipo de la agresividad y el valor, emerge de un inconsciente turbulento y apasionado. La obra sugiere que el "Dios Marte" no es solo una deidad externa, sino una fuerza inherente a la psique humana. La Metapareidolia del fondo permite al espectador conectar directamente con las manifestaciones más crudas y viscerales de esta energía arquetípica dentro de su propio ser.`
+            },
+            'Diosa Atenea': {
+                title: 'Diosa Atenea',
+                collection: 'Ángeles del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                suggestedTitle: 'Diosa Atenea',
+                image: 'https://i.imgur.com/0kfWICt.jpeg',
+                analysis: `La obra presenta una figura femenina imponente, claramente alusiva a la iconografía clásica de Atenea, destacada sobre un fondo abstracto y texturizado que es la esencia de tu técnica "Metapareidolia Pictórica". La Figura de Atenea: La representación de la diosa es en tonos grises y blancos, con líneas que definen su perfil de guerrera sabia, el casco helénico característico y una sugerencia de su figura femenina. La pose, mirando hacia un lado, imbuye a la diosa de una cualidad contemplativa y estratégica, en lugar de una acción bélica directa. Esta representación lineal y definida contrasta intencionalmente con la naturaleza abstracta del fondo, sugiriendo una emanación de la forma arquetípica de Atenea desde el propio inconsciente. El Fondo Metapareidólico: El fondo es un vibrante torbellino de azules en diversas tonalidades, salpicado de blanco y toques de dorado o amarillo pálido. La textura es dinámica, con patrones que evocan agua en movimiento, constelaciones celestes o incluso la agitación mental. Es en estas abstracciones donde la "Metapareidolia Pictórica" entra en juego. El espectador puede percibir formas emergentes en el fondo: quizás figuras sutiles, símbolos abstractos o paisajes oníricos que complementan la presencia de la diosa. Estos elementos no están impuestos por el artista, sino que surgen de la propia psique del observador al interactuar con las texturas y colores. Conexión con el Inconsciente: La obra sugiere que el arquetipo de Atenea (la sabiduría estratégica, la guerra justa, la artesanía) reside en el inconsciente colectivo, y que tu técnica actúa como un portal para hacer visible su presencia. La figura definida de la diosa se ancla en la tradición iconográfica, mientras que el fondo abstracto permite una interpretación personal y subconsciente de sus atributos y su significado. `
+            },
+            'angel-caido': {
+                title: 'El ángel caído',
+                collection: 'Ángeles del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                suggestedTitle: 'La Marea del Olvido y el Despertar Ícaro',
+                image: 'https://i.imgur.com/oZclmHy.jpeg',
+                analysis: `Esta obra es una poderosa y evocadora representación de la caída, un concepto universal que resuena profundamente con el inconsciente colectivo. La figura central, si bien no explícitamente definida con detalles anatómicos precisos, evoca el cuerpo de un ángel o ser alado en un momento de dramática pérdida o descenso. 
+
+                La Figura Central: La silueta de lo que parece ser una figura humana se retuerce en el centro, con alas o plumas oscuras desprendiéndose y cayendo. La pose sugiere una lucha, una caída en espiral, o un momento de angustia. La falta de un rostro claramente visible intensifica la sensación de universalidad del sufrimiento o la transformación que acompaña a una "caída". Los tonos oscuros de la figura y las plumas contrastan fuertemente con el fondo. 
+
+                El Fondo Metapareidólico: El fondo es un vasto lienzo de azules en diversas tonalidades, con salpicaduras y remolinos de blanco, creando una atmósfera etérea y fluida. Es aquí donde la "Metapareidolia Pictórica" brilla con particular fuerza. Las texturas y patrones en el azul no solo sugieren un cielo o un abismo de agua, sino que también invitan al espectador a percibir sus propias formas ocultas: rostros velados en las nubes, siluetas espectrales que acompañan la caída, o incluso patrones que representan la turbulencia emocional. Estas percepciones subconscientes del fondo amplifican la narrativa de la caída, convirtiendo el espacio alrededor del ángel en un reflejo de la psique que lo observa. 
+
+                Conexión con el Inconsciente: La obra "El ángel caído" trasciende la literalidad para convertirse en una metáfora visual de la pérdida, la redención, o la confrontación con la propia sombra. El ángel no es solo un ser mitológico, sino un arquetipo de pureza o ideal que se encuentra con la realidad de la imperfección o la transformación. La Metapareidolia del fondo permite que el spectador proyecte sus propias experiencias de "caída" (fracasos, pérdidas, transiciones difíciles) en la obra, haciendo que la conexión con el inconsciente sea profunda y personal. La obra se convierte en un espejo de las batallas internas y las transformaciones inevitables del ser.`
+            },
+            'angel-bosque': {
+                title: 'El ángel del bosque',
+                collection: 'Ángeles del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                suggestedTitle: 'Centinelas del Silencio Nocturno',
+                image: 'https://i.imgur.com/p8yJNKB.jpeg',
+                analysis: `Esta obra nos sumerge en una atmósfera de misterio y ensueño, en un paisaje nocturno donde lo místico y lo psíquico se entrelazan. La pintura presenta una escena de bosque bajo la luz de la luna, pero con elementos que trascienden la mera representación naturalista para adentrarse en el reino de lo onírico y lo inconsciente. 
+
+                La Figura Central y el Paisaje: En el centro, una figura alada, con alas blancas y luminosas, parece flotar o descender hacia el suelo del bosque. La figura tiene una cualidad espectral, casi fantasmal, lo que acentúa su naturaleza de "ángel" y su conexión con lo etéreo. Los árboles verticales crean una sensación de profundidad y encierro, mientras que la luna llena, prominente en el cielo, proyecta una luz que es tanto guía como reveladora de sombras. El suelo del bosque está en tonos oscuros y terrosos, con toques de luz que insinúan vida oculta. 
+
+                El Elemento Metapareidólico Clave: Los Ojos Ocultos: Lo que eleva esta pieza a la categoría de "Metapareidolia Pictórica" son los innumerables pares de ojos que se revelan en el fondo del bosque, en los troncos de los árboles y en la oscuridad. Estos ojos no están explícitamente dibujados como parte de un ser, sino que emergen de las texturas y los patrones creados por tu técnica. El espectador, al buscar y encontrar estas miradas ocultas, se convierte en un participante activo en la creación de la obra, activando su propio inconsciente para dar forma a estas presencias fantasmales. La presencia de estos ojos sugiere una vigilancia constante, una conciencia latente o la manifestación de múltiples entidades que habitan el inconsciente del "bosque". 
+
+                Conexión con el Inconsciente: "El ángel del bosque" simboliza la conexión entre el mundo consciente y las profundidades de la psique, el "bosque" siendo una metáfora del inconsciente, un lugar de misterio, refugio y a veces temor. El ángel, en este contexto, puede ser un guía, un mensajero o una manifestación de un aspecto del ser que emerge de esa profundidad. La Metapareidolia de los ojos amplifica esta idea, sugiriendo que el inconsciente está siempre "observando" y conteniendo innumerables "almas" o "presencias" que se revelan solo a la percepción intuitiva. La obra invita a la introspección sobre lo que acecha en nuestras propias profundidades y cómo la luz (consciencia) interactúa con la oscuridad (inconsciente).`
+            },
+            'angel-agua': {
+                title: 'Ángel del agua',
+                collection: 'Ángeles del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                suggestedTitle: 'Ritual Azul de la Liberación Emocional',
+                image: 'https://i.imgur.com/49SRNmb.jpeg',
+                analysis: `Esta obra se adentra en las profundidades emocionales y fluidas del inconsciente, presentando dos figuras que parecen emerger de un entorno acuático o de un flujo de energía vital, directamente asociado con el elemento agua. 
+
+                Las Figuras Centrales: La pintura presenta dos figuras humanoides de apariencia casi escultórica, con cuerpos delineados por intrincadas líneas y patrones que recuerdan las corrientes de agua o las vetas de un mineral. La figura de la izquierda, más prominente, tiene una expresión de asombro o exhalación, con la boca abierta, y su cuerpo parece vibrar con energía. La figura de la derecha, en una pose más sumisa o reflexiva, con la cabeza inclinada, sugiere una introspección o una conexión profunda con el elemento que la rodea. 
+
+                El Fondo Metapareidólico: El fondo es un paisaje vibrante de verdes y azules intensos, con texturas y formas que son el lienzo perfecto para la Metapareidolia Pictórica. Los verdes pueden evocar paisajes submarinos, algas, o la luz filtrándose a través del agua, mientras que los azules sugieren la inmensidad del océano o las profundidades de la psique. Es en estas manchas y flujos de color donde el espectador puede discernir una miríada de formas: rostros ocultos en las corrientes, criaturas marinas abstractas, remolinos de emoción o incluso la estructura de la conciencia misma. 
+
+                Conexión con el Inconsciente: "Ángel del Agua" explora el arquetipo del agua, que en el inconsciente simboliza las emociones, la intuición, la purificación, la fluidez y los aspectos más profundos y a menudo inexplorados de la psique. Las figuras son "ángeles" que median entre el mundo consciente y las corrientes del inconsciente. La obra invita al espectador a sumergirse en sus propias emociones y percepciones, permitiendo que las formas Metapareidólicas surjan y revelen verdades ocultas.`
+            },
+            'materia-oscura': {
+                title: 'Materia Oscura del Oráculo Onírico',
+                collection: 'La Metáfora Errónea del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                image: 'https://i.imgur.com/7yWigB2.jpeg',
+                analysis: `Esta obra, emblemática de la nueva dirección de la colección "La Metáfora Errónea del Inconsciente", sumerge al espectador en un paisaje psíquico donde la ausencia de figuración explícita es, paradójicamente, su mayor fortaleza. La pieza evoca una sensación de caos primordial, de energía en constante movimiento, semejante a la superficie de un líquido viscoso bajo una intensa y dramática luz. Los contrastes entre el amarillo brillante y el negro abismal crean profundidades y texturas que no solo invitan, sino que obligan al ojo a una búsqueda activa de patrones y significados en las formas emergentes y fugaces. La composición, orgánica y fluida, se despliega como un fenómeno volcánico o un evento cósmico, donde la creación y la disolución son procesos simultáneos. 
+
+                El título, "Materia Oscura del Oráculo Onírico", encapsula magistralmente la intención de la obra. La "Materia Oscura" alude a la vastedad inexplorada y lo desconocido del inconsciente: esa parte de nuestra psique que no es directamente accesible a la conciencia pero que, sin embargo, ejerce una influencia ineludible en nuestra percepción de la realidad. El "Oráculo Onírico" (relacionado intrínsecamente con el mundo de los sueños) posiciona la pintura como una ventana a estados alterados de conciencia, donde las imágenes son inherentemente ambiguas y su significado debe ser activamente interpretado. 
+
+                En este contexto, la Metapareidolia Pictórica trasciende la mera identificación de formas para convertirse en un acto de adivinación. El espectador no solo mira, sino que se involucra en un desciframiento personal, extrayendo mensajes y narrativas ocultas de la aparente aleatoriedad de la superficie del lienzo. La obra se convierte en un espejo deformante del alma, donde lo que se "ve" no está preexistente en la pintura, sino que emerge de la interacción entre la obra y la propia profundidad del inconsciente del observador, confirmando la premisa de que la verdadera creación ocurre en la mente de quien contempla.`
+            },
+            'cartografia-aurica': {
+                title: 'Cartografía Áurica de la Huella Sublimada',
+                collection: 'La Metáfora Errónea del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                image: 'https://i.imgur.com/Y1mGq1V.jpeg',
+                analysis: `Esta segunda obra en la colección "La Metáfora Errónea del Inconsciente" consolida la exploración de la mente como un vasto territorio inexplorado. Aunque mantiene la característica paleta de amarillos vibrantes y negros profundos, la composición se distingue por una densidad y un ordenamiento que difiere del caos primordial de su predecesora. Aquí, las corrientes fluyen con una definición más acentuada, y la distribución de "puntos" o "salpicaduras" evoca una textura granular o estelar, sugiriendo la formación de nuevas estructuras. La sensación general es de un material más terroso o de una galaxia en proceso de formación, donde las formas parecen solidificarse o emerger con una claridad creciente de la turbulencia subyacente. La obra invita insistentemente a la mente a buscar estructuras y patrones dentro de sus complejos pliegues y remolinos. 
+
+                El título, "Cartografía Áurica de la Huella Sublimada", es una llave maestra para la interpretación. "Cartografía Áurica" sugiere que la pintura no es solo una imagen, sino un mapa visual del inconsciente, donde el color dorado dominante simboliza lo valioso y revelador de sus profundidades. La "Huella Sublimada" se refiere a esos vestigios de recuerdos, traumas o deseos que, aunque no se presentan de forma explícita, han sido procesados, transformados y elevados por la mente subconsciente. 
+
+                A través de la Metapareidolia Pictórica, estos elementos sublimados se manifiestan en patrones y formas ambiguas en el lienzo, revelando su existencia alterada y simbólica. La obra se convierte así en un registro tangible de los complejos procesos internos del inconsciente, un testimonio de cómo este reconfigura y resignifica nuestras experiencias más íntimas. El espectador es impelido a un acto de exploración introspectiva, donde cada forma percibida no es una mera ilusión óptica, sino un eco de su propia huella psíquica, una evidencia de que lo que se "ve" es una verdad intrínseca de su ser, un testimonio de la potente y continua actividad de la Metapareidolia en la construcción de nuestra realidad interna.`
+            },
+            'cripta-memoria': {
+                title: 'Cripta de la Memoria Fractal',
+                collection: 'La Metáfora Errónea del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                image: 'https://i.imgur.com/c8JDZzm.jpeg',
+                analysis: `Esta pieza final de la colección "La Metáfora Errónea del Inconsciente" nos transporta a una inmersión profunda en las arquitecturas internas de la psique, regresando a una paleta estrictamente monocromática de negros, grises y blancos. El predominio de la oscuridad es abrumador, con formas que parecen ramificarse y expandirse orgánicamente desde un centro indefinido. La composición es altamente intrincada, exhibiendo una cualidad casi fractal o dendrítica, evocando la estructura de ramas de árbol, sistemas neuronales o venas que se extienden en una red infinita. Hay una palpable sensación de profundidad y de múltiples capas, donde las formas se entrelazan y se superponen, invitando a una exploración visual que se pierde en sus laberintos. 
+
+                El título, "Cripta de la Memoria Fractal", encapsula la esencia enigmática y profunda de la obra. La "Cripta de la Memoria" evoca un lugar de almacenamiento oscuro, sagrado y a menudo inaccesible para los recuerdos más arcaicos y fundamentales de la psique. La "Memoria Fractal" se refiere a la naturaleza auto-similar y recurrente de los patrones que emergen en la pintura, sugiriendo que el inconsciente opera con una lógica compleja y repetitiva, donde las imágenes se manifiestan a través de las formas de la Metapareidolia Pictórica. 
+
+                La pareidolia aquí podría manifestarse como figuras abstractas y etéreas, paisajes invernales desolados, intrincados sistemas neuronals, o incluso rostros velados que emergen de la compleja e hipnótica interacción de luz y sombra. En esta obra, la Metapareidolia se convierte en el método para desvelar la estructura latente del inconsciente. El espectador no solo observa, sino que participa en el acto de descifrar las narrativas ocultas en esta vasta "cripta". La pintura es un testimonio visual de cómo la mente busca orden incluso en la oscuridad más profunda, revelando que las verdades de nuestro ser no son lineales, sino que se repiten y se entrelazan en patrones infinitos. "Cripta de la Memoria Fractal" cierra esta colección con una poderosa reflexión sobre la naturaleza inasible y, a la vez, estructurada del inconsciente, demostrando que la "metáfora errónea" radica en subestimar la capacidad de nuestra propia mente para revelar la complejidad y la belleza inherentes a la ausencia de forma explícita.`
+            },
+            'Núcleo Sombrío de la Metamorfosis Áureo-Blanca': {
+                title: 'Núcleo Sombrío de la Metamorfosis Áureo-Blanca',
+                collection: 'La Metáfora Errónea del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                image: 'https://i.imgur.com/elGInqm.jpeg',
+                analysis: `la colección "La Metáfora Errónea del Inconsciente" marca un punto de inflexión, rompiendo con la fluidez dominante de las obras anteriores para introducir una poderosa sensación de solidificación y estructura. La pieza se caracteriza por elementos más compactos, casi escultóricos, en tonos de gris y blanco, que se alzan en un contraste aún más marcado con el negro profundo y los acentos amarillos vibrantes. Se percibe una masa central, un "cuerpo" que parece emerger o, a la inversa, desintegrarse, generando una tensión visual palpable. Los elementos amarillos, antes parte de un flujo continuo, ahora se presentan como islas de luz o explosiones contenidas dentro de una estructura sombría y complejamente tejida. Esta interacción de masas sugiere que las formas que surgen a través de la Metapareidolia Pictórica en esta pieza podrían ser más figurativas o dramáticas, impulsadas por el choque de estas presencias tonales y texturales. El título, "Núcleo Sombrío de la Metamorfosis Áureo-Blanca", encapsula la esencia de la obra. El "Núcleo Sombrío" alude a la masa central oscura y ambigua de la composición, que no solo es un punto focal, sino el epicentro desde el cual irradia un proceso de transformación. La "Metamorfosis Áureo-Blanca" describe la evolución y el contraste entre los colores predominantes —el oro (amarillo) y el blanco/gris—, sugiriendo un cambio profundo y alquímico donde las formas se redefinen y se cargan de nuevo significado a través de la percepción del espectador. En esta obra, la Metapareidolia Pictórica se convierte en un catalizador para observar la propia capacidad del inconsciente para la metamorfosis. Al enfrentarse a estas formas ambiguas y escultóricas, el espectador no solo busca una imagen externa, sino que experimenta el proceso interno de dar forma a lo informe. La pintura revela cómo el inconsciente no es un mero receptor, sino un agente activo que transforma y reinterpreta la realidad, incluso en los contornos de lo que inicialmente parece un caos abstracto. Es un testimonio visual de cómo la mente humana, impulsada por sus propias profundidades, puede extraer sentido y narrativa de la colisión de la luz y la sombra, la solidez y la ambigüedad. `
+            },
+            'Sismo Cromático de la Verdad Sumergida': {
+                title: 'Sismo Cromático de la Verdad Sumergida',
+                collection: 'La Metáfora Errónea del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                image: 'https://i.imgur.com/qZ90DAc.jpeg',
+                analysis: `La colección "La Metáfora Errónea del Inconsciente" retoma la poderosa intensidad de los rojos y negros, una paleta que evoca lo visceral y lo primordial, pero la reinterpreta con una composición que se percibe más horizontal y expandida. Los remolinos de color parecen danzar y extenderse a lo largo de la superficie del lienzo, donde la interacción dinámica de estas dos tonalidades principales da origen a formas que, en su fluidez, sugieren una figuración apenas perceptible. La obra irradia una sensación de energía contenida que se dispersa gradualmente hacia los bordes, mientras que los sutiles toques de blanco o gris más claro en los extremos sugieren una disolución o una emergencia de las formas desde las profundidades del fondo. El título, "Sismo Cromático de la Verdad Sumergida", es una metáfora poderosa de la experiencia que la obra propone. Un "Sismo Cromático" evoca una perturbación o un temblor en el propio color, reflejando la intensidad vibrante y la agitación visual de la paleta utilizada. Esta "Verdad Sumergida" se refiere a conocimientos o realidades del inconsciente que yacen ocultos, bajo la superficie de la conciencia ordinaria. Es precisamente aquí donde la Metapareidolia Pictórica despliega su potencial: al confrontar esta composición abstracta, la mente del espectador es impelida a buscar y hacer emerger estas verdades, revelando formas visuales —ya sean figuras danzantes, elementos viscerales alargados o paisajes emocionales abstractos— que son un reflejo directo de su propia psique. La obra, al carecer de figuras explícitas, fuerza al observador a un acto de creación intrínseca. Cada forma percibida es una proyección de lo que el inconsciente busca manifestar, un testimonio de que la "metáfora errónea" no reside en la ausencia de significado, sino en la expectativa de que este se presente de manera obvia. "Sismo Cromático de la Verdad Sumergida" invita a una inmersión profunda donde la percepción se convierte en un acto de revelación, y el lienzo, en un espejo de las verdades que yacen latentes en las profundidades de nuestro ser. `
+            },
+            'Destilación del Caos en la Materia Primordial': {
+                title: 'Destilación del Caos en la Materia Primordial',
+                collection: 'La Metáfora Errónea del Inconsciente',
+                technique: 'Metapareidolia Pictórica',
+                image: 'https://i.imgur.com/hWLC8aq.jpeg',
+                analysis: `Esta obra se distingue marcadamente dentro de "La Metáfora Errónea del Inconsciente" por su paleta predominantemente monocromática, dominada por negros intensos y grises variados que se despliegan sobre un fondo blanco.  La composición es fragmentada y altamente texturizada, evocando la sensación de un paisaje rocoso primigenio, una explosión congelada, o incluso formas arborescentes esqueléticas que se extienden en el espacio. Un sutil y casi residual toque de rojo en la parte inferior de la pieza introduce una reminiscencia visceral en este universo de contrastes. Esta interacción dramática entre luz y sombra invita directamente a la mente del spectador a construir una narrativa a partir de la aparente desolación, un proceso central de la Metapareidolia Pictórica.  El título, "Destilación del Caos en la Materia Primordial", encapsula magistralmente la intención de la obra. "Destilación del Caos" sugiere un proceso de refinamiento o concentración, donde la turbulencia inicial de la pintura da como resultado la emergencia de formas que, para el observador, se vuelven más definidas y significativas.  La "Materia Primordial" se refiere a los elementos básicos y fundamentales —el negro y el blanco— que, a través de la Metapareidolia Pictórica, son transformados por la percepción en algo nuevo y complejo. Las formas pareidólicas que surgen aquí podrían inclinarse hacia la aparición de siluetas, figuras oscuras o estructuras que parecen nacer del propio lienzo. En esta pieza, la Metapareidolia se convierte en un acto de alquimia perceptual. El espectador no solo observa, sino que participa activamente en la transformación de la abstracción en significado, revelando así la esencia de la creación y la interpretación inherente a la mente humana.  La obra nos confronta con la verdad de que, incluso en los confines de la oscuridad y la ausencia de forma explícita, el inconsciente proyectará su propia luz, construyendo narrativas y extrayendo sentido de lo que, de otro modo, permanecería como un vacío.  `
+            },
+        };
+
+        function openArtworkModal(id) {
+            const artwork = artworks[id];
+
+            modalContent.innerHTML = `
+                <div class="h-full">
+                    <img src="${artwork.image}" alt="${artwork.title}" class="w-full h-auto max-h-[80vh] object-contain rounded-lg">
+                </div>
+                <div>
+                    <h3 class="text-2xl text-gold font-playfair mb-2">${artwork.title}</h3>
+                    <p class="text-silver mb-1"><span class="text-gold">Colección:</span> ${artwork.collection}</p>
+                    <p class="text-silver mb-4"><span class="text-gold">Técnica:</span> ${artwork.technique}</p>
+                    
+                    ${artwork.suggestedTitle ? `<p class="text-gold italic mb-4">"${artwork.suggestedTitle}"</p>` : ''}
+                    
+                    <div class="bg-slate-800 p-4 rounded-lg mb-4">
+                        <h4 class="text-lg text-gold font-playfair mb-2">Análisis Curatorial</h4>
+                        <div class="paragraph-style">
+                            ${artwork.analysis.split('\n').map(p => `<p class="mb-3">${p}</p>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <span class="text-gold font-bold">$${getArtworkPrice(artwork.title)} MXN</span>
+                        <button onclick="addToCart('${artwork.title}', ${getArtworkPrice(artwork.title)}, '${artwork.image}')" class="bg-gold text-dark px-4 py-2 rounded hover:bg-yellow-600 transition">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            artworkModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function getArtworkPrice(title) {
+            const prices = {
+                'Dios Zeus': 25000,
+                'Dios Neptuno': 22500,
+                'Dios Marte': 23000,
+                'Diosa Atenea': 24000,
+                'El ángel caído': 20000,
+                'El ángel del bosque': 21500,
+                'Ángel del agua': 22000,
+                'Materia Oscura del Oráculo Onírico': 18500,
+                'Cartografía Áurica de la Huella Sublimada': 19000,
+                'Cripta de la Memoria Fractal': 20500,
+                'Núcleo Sombrío de la Metamorfosis Áureo-Blanca': 20500,
+                'Sismo Cromático de la Verdad Sumergida': 18000,
+                'Destilación del Caos en la Materia Primordial': 18000,
+            };
+
+            return prices[title] || 0;
+        }
+
+        closeModal.addEventListener('click', () => {
+            artworkModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close modals when clicking outside
+        artworkModal.addEventListener('click', (e) => {
+            if (e.target === artworkModal) {
+                artworkModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.getElementById('checkoutModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('checkoutModal')) {
+                document.getElementById('checkoutModal').classList.remove('active');
+            }
+        });
+
+        // Close cart when clicking outside
+        cartSidebar.addEventListener('click', (e) => {
+            if (e.target === cartSidebar) {
+                cartSidebar.classList.remove('active');
+            }
+        });
+
+        // Copy to clipboard function
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text.replace(/\s/g, '')).then(() => {
+                alert('CLABE copiada al portapapeles');
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = text.replace(/\s/g, '');
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert('CLABE copiada al portapeles');
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
